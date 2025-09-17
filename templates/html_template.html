@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="$lang$" xml:lang="$lang$" $if(dir)$ dir="$dir$" $endif$>
+
+<head>
+  <link rel="stylesheet" href="https://philosophymindscience.org/public/journals/19/styleSheet.css" type="text/css" />
+  <script type="text/javascript" id="MathJax-script" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.0.0/es5/tex-mml-chtml.js">
+</script>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  $for(author-meta)$
+  <meta name="author" content="$author-meta$" />
+  $endfor$
+  $if(date-meta)$
+  <meta name="dcterms.date" content="$date-meta$" />
+  $endif$
+  $if(keywords)$
+  <meta name="keywords" content="$for(keywords)$$keywords$$sep$, $endfor$" />
+  $endif$
+  <title>$if(title-prefix)$$title-prefix$ – $endif$$title-hdr$</title>
+  $if(math)$
+  $math$
+  $endif$
+
+  $for(header-includes)$
+  $header-includes$
+  $endfor$
+</head>
+
+<body>
+  <h1 property="headline">$title$</h1>
+  $if(subtitle)$
+  <h2 property="headline">$subtitle$</h2>
+  $endif$
+  <!-- </header> -->
+  <p class="author-list">
+    <!--- AUTHORS--->
+  $for(author)$
+  <p>
+    $if(author.name)$
+      $if(author.email)$
+        <a href="mailto:$author.email$">$author.name$</a>
+      $else$
+        $author.name$
+      $endif$
+      $if(author.orcid)$
+        <a href="https://orcid.org/$author.orcid$" target="_blank"><img src="$orcid-fig$" alt="ORCID"
+        style="width:14px"></a>
+      $endif$
+      $if(author.affiliation)$
+        ($for(author.affiliation)$$author.affiliation.organization$$sep$, $endfor$)
+      $endif$
+    $else$
+      $author$
+    $endif$
+  </p>
+  $endfor$
+  </p>
+
+  <p>
+    How to cite: $name-short$ ($date$). $title-meta$ <i>Philosophy and the Mind Sciences</i>, $volume$$if(artnum)$, $artnum$$endif$. <a
+      href="https://doi.org/10.33735/phimisci.$date$.$artid$">https://doi.org/10.33735/phimisci.$date$.$artid$
+    </a>
+  </p>
+  <p>
+    &#169; The author(s). <a href="$license-url$" target="_blank"><img src="$license-fig$" alt="CC-BY-4-0"
+        style="width:50px"></a>
+  </p>
+  <p>
+    $license$ <a href="https://philosophymindscience.org" target="_blank">
+      https://philosophymindscience.org</a> &nbsp; (ISSN: 2699-0369)
+  </p>
+
+  $if(abstract)$
+  <h2>Abstract</h2>
+  <p>
+    $abstract$
+  </p>
+  $endif$
+  $if(keywords)$
+  <b>Keywords:</b>
+  $keywords$
+  $endif$
+
+  $for(include-before)$
+  $include-before$
+
+  $endfor$
+
+  $if(specialissue)$
+  <p class="specialissue" style="font-style: italic;">$specialissue$</p>
+  $endif$
+
+  <div property="articleBody" class="article-body">
+    $body$
+  </div>
+  </article>
+  <footer>
+    <p>
+      $license-html$
+    </p>
+  </footer>
+  </div>
+</body>
+
+</html>

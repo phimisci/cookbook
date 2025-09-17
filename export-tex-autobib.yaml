@@ -1,0 +1,11 @@
+standalone: true
+from: markdown
+template: templates/phimisci-twocolumn.tex
+pdf-engine: latexmk
+pdf-engine-opts:
+    - '-lualatex'
+    - '-diagnostics'
+cite-method: biblatex    
+number-sections: true
+metadata-files:
+    - ${.}/templates/journal_metadata.yaml

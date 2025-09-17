@@ -1,0 +1,3 @@
+standalone: true
+to: markdown
+data-dir: ${.}/inputs/

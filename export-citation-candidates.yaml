@@ -1,0 +1,3 @@
+to: markdown
+filters:
+    - filters/find_citation_candidates.py

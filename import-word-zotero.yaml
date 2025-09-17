@@ -1,0 +1,4 @@
+standalone: true
+from: docx+citations
+to: markdown
+data-dir: ${.}/inputs/

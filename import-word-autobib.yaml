@@ -1,0 +1,5 @@
+standalone: true
+to: markdown
+data-dir: ${.}/inputs/
+filters:
+    - ${.}/filters/hand-written-citations.py

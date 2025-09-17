@@ -1,0 +1,4 @@
+standalone: true
+to: bibtex
+filters:
+    - citeproc

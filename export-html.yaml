@@ -1,0 +1,12 @@
+standalone: true
+from: markdown
+to: html
+template: templates/html_template.html
+html-math-method:
+    method: mathjax
+filters:
+    - citeproc
+csl: ${.}/templates/apa7-single-spaced.csl
+number-sections: true
+metadata-files:
+    - ${.}/templates/journal_metadata.yaml
