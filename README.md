@@ -9,7 +9,7 @@ pandoc --defaults <recipe.yaml> input.md --bibliography input.bib --output <outp
 
 The file name of each recipe explains its purpose. They are described in more detail below.
 
-*Note*: The file extension `.yaml` can be omitted in pandoc calls. That is, `pandoc --defaults recipe.yaml` and `pandoc --defaults recipe` are synonymous.
+> *Note*: The file extension `.yaml` can be omitted in pandoc calls. That is, `pandoc --defaults recipe.yaml` and `pandoc --defaults recipe` are synonymous.
 
 ## Contents
   * [Requirements](#requirements)
@@ -39,9 +39,9 @@ The defaults can be made available system-wide by moving the entire folder, incl
 
 - On Windows, the pandoc user directory can usually be found by locating to `%APPDATA%\pandoc` in Windows Explorer.
 
-*Note*: `pandoc -v` outputs the `user data directory`, but all defaults must be placed in a `defaults` subfolder of that directory. You might have to create this directory. In the Unix example above, it would lie in `/home/plato/.local/share/pandoc/defaults`.
+> *Note*: `pandoc -v` outputs the `user data directory`, but all defaults must be placed in a `defaults` subfolder of that directory. You might have to create this directory. In the Unix example above, it would lie in `/home/plato/.local/share/pandoc/defaults`.
 
-*Note*: The YAML files containing the defaults must be placed in the root `defaults` folder mentioned above. The `defaults` folder may contain subdirectories (such as for filters or templates), but the YAML recipes must lie in its root.
+> *Note*: The YAML files containing the defaults must be placed in the root `defaults` folder mentioned above. The `defaults` folder may contain subdirectories (such as for filters or templates), but the YAML recipes must lie in its root.
 
 Once installed there, the defaults can be used from any directory. This is particularly useful if you keep separate subfolders for publication projects.
 
