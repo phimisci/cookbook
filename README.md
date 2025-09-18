@@ -11,13 +11,37 @@ The file name of each recipe explains its purpose. They are described in more de
 
 ## Contents
   * [Requirements](#requirements)
+  * [Installation](#installation)
   * [Import recipes](#import-recipes)
   * [Export recipes](#export-recipes)
 
 ## Requirements
-- A pandoc installation
+- A pandoc installation with version 3.1 or later
 - A TeX Live version from 2022 or later
 - A terminal app
+
+## Installation
+The defaults can be used by downloading/cloning this folder. 
+
+The defaults can be made available system-wide by moving the entire folder, including all templates and filters, to a subfolder in pandoc's user directory. This directory can be found as `User data directory` in the output of `pandoc -v`. 
+
+- On Unix systems your output might look like this:
+   ```
+   $ pandoc -v
+   pandoc 3.1.11.1
+   Features: -server +lua
+   Scripting engine: Lua 5.4
+   User data directory: /home/plato/.local/share/pandoc
+   Copyright (C) 2006-2023 John MacFarlane. ...
+   ```
+
+- On Windows, the pandoc user directory can usually be found by locating to `%APPDATA%\pandoc` in Windows Explorer.
+
+**Note**: `pandoc -v` outputs the `user data directory`, but all defaults must be placed in a `defaults` subfolder of that directory. You might have to create this directory. In the Unix example above, it would lie in `/home/plato/.local/share/pandoc/defaults`.
+
+**Note**: The YAML files containing the defaults must be placed in the root `defaults` folder mentioned above. The `defaults` folder may contain subdirectories (such as for filters or templates), but the YAML recipes must lie in its root.
+
+Once installed there, the defaults can be used from any directory. This is particularly useful if you keep separate subfolders for publication projects.
 
 ## Import recipes
 ### Import from a word processor
