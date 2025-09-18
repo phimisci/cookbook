@@ -1,7 +1,7 @@
 standalone: true
 from: markdown
 to: html
-template: templates/html_template.html
+template: ${.}/templates/html_template.html
 html-math-method:
     method: mathjax
 filters:
