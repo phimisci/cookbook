@@ -1,5 +1,5 @@
 # Cookbook
-These recipes can be used as default base configurations for pandoc to process files in the various steps of the production cycle at Philosophy and the Mind Sciences.
+These recipes can be used as [default base configurations](https://pandoc.org/MANUAL.html#defaults-files) for pandoc to process files in the various steps of the production cycle at Philosophy and the Mind Sciences.
 
 The recipes, stored as `.yaml` files in this folder, can be passed to `pandoc --defaults`, e.g.:
 
