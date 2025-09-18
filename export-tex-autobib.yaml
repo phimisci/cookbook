@@ -5,7 +5,9 @@ pdf-engine: latexmk
 pdf-engine-opts:
     - '-lualatex'
     - '-diagnostics'
-cite-method: biblatex    
+cite-method: biblatex
+metadata:
+    parentheses: true
 number-sections: true
 metadata-files:
     - ${.}/templates/journal_metadata.yaml
